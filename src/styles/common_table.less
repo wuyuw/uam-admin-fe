@@ -1,0 +1,77 @@
+@import './antd2material.less';
+
+.paper {
+  padding: 24px;
+  text-align: center;
+}
+
+.tableHeader {
+  display: flex;
+  flex-wrap: 'wrap';
+  justify-content: space-between;
+  margin-bottom: 10px;
+
+  .tableHeaderLeft {
+    display: flex;
+    // flex-wrap: wrap;
+    align-items: flex-end;
+    justify-content: flex-start;
+
+    & > * {
+      margin-top: 8px;
+      margin-right: 8px;
+    }
+  }
+
+  .tableHeaderRight {
+    display: flex;
+    align-items: flex-end;
+
+    & > * {
+      margin-top: 8px;
+      margin-right: 8px;
+    }
+  }
+}
+
+.tableHeaderLeft {
+  .searchControl {
+    display: flex;
+    align-items: center;
+    width: 400px;
+    height: 55px;
+    padding: 2px 4px;
+
+    .searchInput {
+      flex: 1;
+      margin-left: 8px;
+    }
+
+    .iconButton {
+      padding: 10px;
+    }
+  }
+}
+
+.tableHeaderRight {
+  .addButton {
+    white-space: nowrap;
+  }
+}
+
+.tagButton {
+  margin: 2px 3px !important;
+  font-size: 12px !important;
+  white-space: nowrap !important;
+  text-transform: none !important;
+}
+
+.tagStackColumn {
+  max-height: 120px;
+  overflow-y: auto;
+
+  & > * {
+    margin-right: 8px;
+    margin-bottom: 8px;
+  }
+}

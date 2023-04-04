@@ -1,0 +1,18 @@
+version: '3'
+
+services:
+  uam-admin-fe_tengine:
+    image: wuyuw/uam-admin-fe:0.0.1
+    container_name: uam-admin-fe_tengine
+    ports:
+      - "5100:80"
+    restart: always
+    networks:
+      - net
+
+networks:
+  net:
+    driver: bridge
+    ipam:
+      config:
+        - subnet: 192.168.144.0/20
