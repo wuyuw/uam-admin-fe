@@ -1,6 +1,6 @@
 const currentUser = {
   uid: 515,
-  userName: '东湖吴彦祖',
+  nickname: '东湖吴彦祖',
   email: 'wuyuw515@gmail.com',
   permissions: [
     'uam-admin',
