@@ -9,8 +9,8 @@ build_docker_image-job:
   stage: build_docker_image
   image: wuyuw/dind:node16
   script:
-    - bash deploy/build.sh -e ${CI_COMMIT_TAG%-*} -v ${CI_COMMIT_TAG#*-} -u $DOCKER_USER -p $DOCKER_PASSWORD
+    - bash deploy/build.sh -v $CI_COMMIT_TAG -u $DOCKER_USER -p $DOCKER_PASSWORD
   only:
-    - /(test|prod)-\d+\.\d+\.\d+$/
+    - /v\d+\.\d+\.\d+$/
   tags:
-    - my_docker_runner
+    - mua_docker_runner
