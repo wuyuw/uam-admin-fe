@@ -70,3 +70,15 @@
 
 5. 点击仓库导航栏的`Actions`选项卡查看 Workflow 执行情况
 6. 在 Docker Hub 仓库中确认镜像是否上传成功
+
+## 使用 docker-compose 部署
+
+1. 登录部署服务器并检出代码
+2. 在自定义目录创建 nginx 配置文件`nginx.conf`，配置文件模板参考`deploy/nignx.conf`，只需修改 proxy_pass 中的 IP 即可
+3. 修改`deploy/docker-compose.yaml`配置文件中 volumns 的 nginx.conf 本地文件路径
+4. 替换`deploy/deploy.sh`中 docker 镜像名称中的`wuyuw`为你自己的账户
+5. 安装 docker-compose
+6. 在项目根目录下执行
+   ```bash
+   $ bash deploy/deploy.sh -v vx.x.x
+   ```
