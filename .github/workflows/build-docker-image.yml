@@ -1,5 +1,5 @@
 name: build-docker-image
-run-name: build ${{ secrets.DOCKERHUB_USERNAME }}/uam-admin-fe:${{ github.ref_name }}
+run-name: build uam-admin-fe:${{ github.ref_name }}
 on:
   push:
     tags:
