@@ -47,6 +47,8 @@
    $ pnpm dev
    ```
 
+5. 如要与服务端进行联调，在`.umirc.ts`文件中添加配置项`mock: false`
+
 ## 基于 Github Actions 的 CI 能力执行自动构建镜像
 
 1. Fork 代码仓库
