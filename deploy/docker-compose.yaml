@@ -2,8 +2,10 @@ version: '3'
 
 services:
   uam-admin-fe_tengine:
-    image: wuyuw/uam-admin-fe:0.0.1
+    image: wuyuw/uam-admin-fe:v0.0.1
     container_name: uam-admin-fe_tengine
+    volumes:
+      - /Users/fifteen/conf/uam/nginx.conf:/etc/nginx/nginx.conf
     ports:
       - "5100:80"
     restart: always
