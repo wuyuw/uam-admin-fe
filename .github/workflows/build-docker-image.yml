@@ -42,5 +42,8 @@ jobs:
         name: Build and push
         uses: docker/build-push-action@v4
         with:
+          # build context dir
+          context: .
+          file: ./deploy/Dockerfile
           push: true
           tags: ${{ secrets.DOCKERHUB_USERNAME }}/uam-admin-fe:${{ github.ref_name }}
